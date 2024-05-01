@@ -1,6 +1,6 @@
-package com.aftercare.aftercareapi.Student;
+package com.aftercare.aftercareapi.Models;
 
-public class Student {
+public class Patient {
     public int id;
     public String name;
     public String lastName;
