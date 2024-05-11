@@ -1,3 +1,13 @@
+com\aftercare\aftercareapi\Models\Appointments\AppointmentDTO.class
+com\aftercare\aftercareapi\Models\PatientDTO.class
+com\aftercare\aftercareapi\Models\Patient.class
+com\aftercare\aftercareapi\Models\Patient$PatientBuilder.class
+com\aftercare\aftercareapi\Models\Address.class
+com\aftercare\aftercareapi\Models\Appointments\AppointmentResponse.class
 com\aftercare\aftercareapi\AftercareApiApplication.class
+com\aftercare\aftercareapi\config\SecurityConfig.class
 com\aftercare\aftercareapi\controller\UserController.class
-com\aftercare\aftercareapi\Student\Student.class
+com\aftercare\aftercareapi\Models\Address$AddressBuilder.class
+com\aftercare\aftercareapi\Enums\Requests.class
+com\aftercare\aftercareapi\controller\AppointmentController.class
+com\aftercare\aftercareapi\Services\AddPatientService.class

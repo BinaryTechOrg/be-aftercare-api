@@ -1,19 +1,24 @@
 package com.aftercare.aftercareapi.Models;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Patient {
-    public int id;
-    public String name;
-    public String lastName;
 
-    public void setId(int id){
-        this.id = id;
-    }
-
-    public void setName(String name){
-        this.name = name;
-    }
-
-    public void setLastName(String lastName){
-        this.lastName = lastName;
-    }
+    private Integer id;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String password;
+    private String phone;
+    private String gender;
+    private List<Address> addressList;
 }

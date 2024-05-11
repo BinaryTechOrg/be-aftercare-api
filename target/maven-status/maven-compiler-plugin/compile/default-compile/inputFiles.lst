@@ -1,4 +1,12 @@
-C:\Users\futiliter\Documents\Projects\aftercare-api\src\main\java\com\aftercare\aftercareapi\config\ServerProperties.java
 C:\Users\futiliter\Documents\Projects\aftercare-api\src\main\java\com\aftercare\aftercareapi\controller\UserController.java
+C:\Users\futiliter\Documents\Projects\aftercare-api\src\main\java\com\aftercare\aftercareapi\Models\PatientDTO.java
 C:\Users\futiliter\Documents\Projects\aftercare-api\src\main\java\com\aftercare\aftercareapi\AftercareApiApplication.java
-C:\Users\futiliter\Documents\Projects\aftercare-api\src\main\java\com\aftercare\aftercareapi\Student\Student.java
+C:\Users\futiliter\Documents\Projects\aftercare-api\src\main\java\com\aftercare\aftercareapi\Enums\Requests.java
+C:\Users\futiliter\Documents\Projects\aftercare-api\src\main\java\com\aftercare\aftercareapi\Models\Appointments\AppointmentDTO.java
+C:\Users\futiliter\Documents\Projects\aftercare-api\src\main\java\com\aftercare\aftercareapi\Services\AddPatientService.java
+C:\Users\futiliter\Documents\Projects\aftercare-api\src\main\java\com\aftercare\aftercareapi\config\SecurityConfig.java
+C:\Users\futiliter\Documents\Projects\aftercare-api\src\main\java\com\aftercare\aftercareapi\controller\AppointmentController.java
+C:\Users\futiliter\Documents\Projects\aftercare-api\src\main\java\com\aftercare\aftercareapi\Models\Address.java
+C:\Users\futiliter\Documents\Projects\aftercare-api\src\main\java\com\aftercare\aftercareapi\Models\Patient.java
+C:\Users\futiliter\Documents\Projects\aftercare-api\src\main\java\com\aftercare\aftercareapi\Models\Appointments\AppointmentResponse.java
+C:\Users\futiliter\Documents\Projects\aftercare-api\src\main\java\com\aftercare\aftercareapi\config\JwtUtil.java
