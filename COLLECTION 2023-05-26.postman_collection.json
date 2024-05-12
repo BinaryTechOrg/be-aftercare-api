@@ -1,0 +1,337 @@
+{
+	"info": {
+		"_postman_id": "a72f9c42-e096-4f00-9682-02703ac6c7eb",
+		"name": "COLLECTION 2023-05-26",
+		"description": "# Working with preset requests\n\nIn this workspace, you’ll find a [collection](https://learning.postman.com/docs/collections/collections-overview) with preset requests for a basic CRUD operation. Each request contains a base URL [variable](https://learning.postman.com/docs/sending-requests/variables) with your base URL filled in.\n\n**Follow these steps to customize your requests:**\n\n**Step 1:** Build each request by updating its path.\n\nAdd the request’s path after the `base_url` variable.\n\nYou can also add query parameters, body, and other required details.\n\n<img src=\"https://skills-assets.pstmn.io/growth-experiments/GRW-358/URL.gif\" alt=\"\">\n\n**Step 2:** Send the request and save it. Don’t forget to update the request names.\n\n**Step 3:** Feel free to delete the requests that you don’t need.\n\n\n# Working with preset environments\n\nIn this workspace, you’ll find preset [environments](https://learning.postman.com/docs/sending-requests/managing-environments) for local, staging, and production. Each environment contains variables for your base URL and authorization (auth) token.\n\n**Follow these steps to customize your environments:**\n\n**Step 1:** Update the variables in each environment and save them. Feel free to add or remove variables.\n\n**Step 2:** Activate the environment to begin testing in it.\n\n<img src=\"https://skills-assets.pstmn.io/growth-experiments/GRW-358/Environments.gif\" alt=\"\">",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27653752"
+	},
+	"item": [
+		{
+			"name": "Create Patient",
+			"item": [
+				{
+					"name": "PatientList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/patients",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterPatient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 2,\r\n        \"firstName\": \"Jan\",\r\n        \"lastName\": \"Doe\",\r\n        \"email\": null,\r\n        \"password\": null,\r\n        \"phone\": null,\r\n        \"gender\": null,\r\n        \"addressList\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/patients/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"patients",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginStudent",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "NYCUM3twPockIP0t-7uezdEv-rBlFdipQwu2PcC1xKo8ZkwTnmxgr4dYRiMDfq_T",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "WTJ3lMU8Wmr1oWzDxPIHiwVIAYSa0VPm",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "grant_type",
+								"value": "authorization_code",
+								"uuid": "b12068e9-5214-4636-ae1e-4b0bb7519657",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"grant_type\": \"client_credentials\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dev-l0627g6zxlpnvqv7.us.auth0.com/oauth/token/?grant_type=client_credentials",
+							"protocol": "https",
+							"host": [
+								"dev-l0627g6zxlpnvqv7",
+								"us",
+								"auth0",
+								"com"
+							],
+							"path": [
+								"oauth",
+								"token",
+								""
+							],
+							"query": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/students/{{idStudent}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"students",
+								"{{idStudent}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteStudent",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/students/{{idStudent}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"students",
+								"{{idStudent}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Forgotten Password",
+			"item": [
+				{
+					"name": "StudentList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/students/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"students",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterStudent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/student/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"student",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginStudent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/student/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"student",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/students/{{idStudent}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"students",
+								"{{idStudent}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteStudent",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/students/{{idStudent}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"students",
+								"{{idStudent}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LoginStudent",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "NYCUM3twPockIP0t-7uezdEv-rBlFdipQwu2PcC1xKo8ZkwTnmxgr4dYRiMDfq_T",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "WTJ3lMU8Wmr1oWzDxPIHiwVIAYSa0VPm",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "grant_type",
+						"value": "authorization_code",
+						"uuid": "27c6f2ce-6c13-4eeb-9fb3-8de65d6705c0",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"grant_type\": \"client_credentials\",\r\n    \"audience\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev-l0627g6zxlpnvqv7.us.auth0.com/oauth/token/",
+					"protocol": "https",
+					"host": [
+						"dev-l0627g6zxlpnvqv7",
+						"us",
+						"auth0",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token",
+						""
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:8080"
+		}
+	]
+}
