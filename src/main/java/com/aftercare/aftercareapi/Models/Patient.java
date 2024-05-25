@@ -1,5 +1,6 @@
 package com.aftercare.aftercareapi.Models;
 
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,12 +14,13 @@ import java.util.List;
 @AllArgsConstructor
 public class Patient {
 
-    private Integer id;
+    @Id
+    private int id;
     private String firstName;
     private String lastName;
     private String email;
     private String password;
     private String phone;
     private String gender;
-    private List<Address> addressList;
+    private Address address;
 }
