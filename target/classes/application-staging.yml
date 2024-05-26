@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://staging-db-host:5432/postgres_staging
+    username: staging_user
+    password: staging_password
+
+jwt:
+  secret: staging-secret-key
+
+cors:
+  allowed-origins: "https://staging.example.com"

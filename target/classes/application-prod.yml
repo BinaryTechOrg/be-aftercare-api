@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://prod-db-host:5432/postgres_prod
+    username: prod_user
+    password: prod_password
+
+jwt:
+  secret: prod-secret-key
+
+cors:
+  allowed-origins: "https://www.example.com"

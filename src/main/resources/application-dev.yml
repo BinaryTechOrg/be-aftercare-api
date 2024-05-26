@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: futiliter
+    password: Futile10
+
+
+cors:
+  allowed-origins: "http://localhost:4200"
+
+logging:
+  level:
+    root: INFO
+    org.springframework:
+      security: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
