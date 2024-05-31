@@ -1,0 +1,455 @@
+{
+	"info": {
+		"_postman_id": "1aff7118-2b87-49da-8f4f-ec2d9a31e6cd",
+		"name": "COLLECTION 2024-05-31",
+		"description": "# Working with preset requests\n\nIn this workspace, you’ll find a [collection](https://learning.postman.com/docs/collections/collections-overview) with preset requests for a basic CRUD operation. Each request contains a base URL [variable](https://learning.postman.com/docs/sending-requests/variables) with your base URL filled in.\n\n**Follow these steps to customize your requests:**\n\n**Step 1:** Build each request by updating its path.\n\nAdd the request’s path after the `base_url` variable.\n\nYou can also add query parameters, body, and other required details.\n\n<img src=\"https://skills-assets.pstmn.io/growth-experiments/GRW-358/URL.gif\" alt=\"\">\n\n**Step 2:** Send the request and save it. Don’t forget to update the request names.\n\n**Step 3:** Feel free to delete the requests that you don’t need.\n\n\n# Working with preset environments\n\nIn this workspace, you’ll find preset [environments](https://learning.postman.com/docs/sending-requests/managing-environments) for local, staging, and production. Each environment contains variables for your base URL and authorization (auth) token.\n\n**Follow these steps to customize your environments:**\n\n**Step 1:** Update the variables in each environment and save them. Feel free to add or remove variables.\n\n**Step 2:** Activate the environment to begin testing in it.\n\n<img src=\"https://skills-assets.pstmn.io/growth-experiments/GRW-358/Environments.gif\" alt=\"\">",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27653752"
+	},
+	"item": [
+		{
+			"name": "Create Patient",
+			"item": [
+				{
+					"name": "RegisterPatient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 0,\r\n    \"firstName\": \"Jan\",\r\n    \"lastName\": \"Doe\",\r\n    \"email\": \"jane@gmail.com\",\r\n    \"phone\": \"5142955315\",\r\n    \"gender\": \"m\",\r\n    \"address\": {\r\n        \"city\": \"New York\",\r\n        \"state\": \"NY\",\r\n        \"zip\": \"10001\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/patients/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"patients",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PatientList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/patients",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterPatient2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 0,\r\n    \"firstName\": \"Mamadou\",\r\n    \"lastName\": \"Kante\",\r\n    \"email\": \"kante@gmail.com\",\r\n    \"phone\": \"8197302932\",\r\n    \"gender\": \"f\",\r\n    \"address\": {\r\n        \"city\": \"Los Angeles\",\r\n        \"state\": \"LA\",\r\n        \"zip\": \"209484\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/patients/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"patients",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PatientList Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/patients",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/patients/{{patientID}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"patients",
+								"{{patientID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteStudent",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/patients/{{patientID}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"patients",
+								"{{patientID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PatientList Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/patients",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Auth0 Test",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientSecret",
+									"value": "{{CLIENT_SECRET}}",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{CLIENT_ID}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{yourOktaDomain}}/oauth/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{yourOktaDomain}}/authorize",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "http://localhost:8080/login/oauth2/code/auth0",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "Auth0 Token",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid profile email",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "grant_type",
+								"value": "authorization_code",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client_id\": \"{{client_id}}\",\r\n  \"client_secret\": \"{{client_secret}}\",\r\n  \"audience\": \"{{audience}}\",\r\n  \"grant_type\": \"client_credentials\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{yourOktaDomain}}/oauth/token",
+							"host": [
+								"{{yourOktaDomain}}"
+							],
+							"path": [
+								"oauth",
+								"token"
+							],
+							"query": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Forgotten Password",
+			"item": [
+				{
+					"name": "StudentList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/students/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"students",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterStudent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/student/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"student",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginStudent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/student/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"student",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/students/{{idStudent}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"students",
+								"{{idStudent}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteStudent",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/students/{{idStudent}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"students",
+								"{{idStudent}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LoginStudent",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "NYCUM3twPockIP0t-7uezdEv-rBlFdipQwu2PcC1xKo8ZkwTnmxgr4dYRiMDfq_T",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "WTJ3lMU8Wmr1oWzDxPIHiwVIAYSa0VPm",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "grant_type",
+						"value": "authorization_code",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"grant_type\": \"client_credentials\",\r\n    \"audience\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev-l0627g6zxlpnvqv7.us.auth0.com/oauth/token/",
+					"protocol": "https",
+					"host": [
+						"dev-l0627g6zxlpnvqv7",
+						"us",
+						"auth0",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token",
+						""
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:8080"
+		},
+		{
+			"key": "patientID",
+			"value": "1"
+		}
+	]
+}
