@@ -8,7 +8,7 @@ import javax.validation.constraints.NotBlank;
 
 
 @Configuration
-@ConfigurationProperties(prefix = "okta.oauth2")
+@ConfigurationProperties(prefix = "auth0.oauth2")
 @Validated
 public class Oauth2ClientProperties {
 

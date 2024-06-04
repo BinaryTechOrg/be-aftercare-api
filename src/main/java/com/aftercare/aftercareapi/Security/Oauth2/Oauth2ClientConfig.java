@@ -18,18 +18,18 @@ public class Oauth2ClientConfig {
 
     @Bean
     public ClientRegistrationRepository clientRegistrationRepository() {
-        ClientRegistration clientRegistration = ClientRegistration.withRegistrationId("okta")
+        ClientRegistration clientRegistration = ClientRegistration.withRegistrationId("auth0")
                 .clientId(properties.getClientId())
                 .clientSecret(properties.getClientSecret())
                 .issuerUri(properties.getIssuerUri())
-                .authorizationUri(properties.getIssuerUri() + "/v1/authorize")
-                .tokenUri(properties.getIssuerUri() + "/v1/token")
-                .userInfoUri(properties.getIssuerUri() + "/v1/userinfo")
-                .jwkSetUri(properties.getIssuerUri() + "/v1/keys")
+                .authorizationUri(properties.getIssuerUri() + "/authorize")
+                .tokenUri(properties.getIssuerUri() + "/oauth/token")
+                .userInfoUri(properties.getIssuerUri() + "/userinfo")
+                .jwkSetUri(properties.getIssuerUri() + "/.well-known/jwks.json")
                 .scope("openid", "profile", "email")
                 .redirectUri("{baseUrl}/login/oauth2/code/{registrationId}")
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
-                .clientName("Okta")
+                .clientName("Auth0")
                 .build();
 
         return new InMemoryClientRegistrationRepository(clientRegistration);

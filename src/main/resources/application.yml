@@ -2,6 +2,8 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: Futile10
   jpa:
     hibernate:
       ddl-auto: create-drop
@@ -24,12 +26,52 @@ spring:
 jwt:
   secret: ${JWT_SECRET:NnV0kJy/2t68gxPh1P5tH3u5V85NYghUJ5D9yRTfIoE=}
   refreshSecret: ${JWT_REFRESH_SECRET:qIqUBt3FdlfCzMoQybU9lkndm0G2C93DD/4lAhMTFYw=}
+  rs256-private-key: |
+    -----BEGIN PRIVATE KEY-----
+    MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCevDJ2jq9i0He3
+    6TjURTmqgnhjok0Dryt/BOr2lassLWBO31oJ8PueVYhfidK9bxldxKZm3Z0km/7U
+    eAXcr127Xs9fag47rCm4wuDGfY6b0rqR+xNXeP5NLTdI4yldDU0kQ2LRjLmQ6PhO
+    ozz4YW544urqOdSvxUULugPWkztNlNkFL/m7BraJJnI9IPWeKl03UFOtWiLv6fvP
+    dJYyKKUzC6I+DrNN/uWXhkL/gOhcN6ti3IEWjOQh5sj/ARmuh0C0e3q2ghfdN3B3
+    OxRvyDt2hS0CCDkGciPTni33Bc3TcxSFNWV53CMIR9r71zqetXE24vuqlsUKPHcz
+    o13+fa3RAgMBAAECggEBAIGAMn9M20N3piQxrn5nV6uHM+a9M62szISdI4A3DOZG
+    wsq2J4PyyaUcTNz82SRZLk20sLk9VgXXCqiWntmzbHn/2JkUMjZ2t7cXrj/hkWYJ
+    HtMYDmiPupCGMhNR2J4kyump3EXvVDkoB+RIAub0vib7ogGjWqRoAXOWt6johzo7
+    y0P2bZugdg4TWs/7dtju95nys/PC4jEhRXjx4PZO+/dsks5nMQmaRM9axU+6uV/z
+    18qvKtdMQOjpAjVR4r4rPTv7yF0aUj1z+LygZIUPiLVeAchwjyJNxYWsU2hhigkJ
+    IGdgCNuHFifs17IYifLfS+av93/4A/3mtjJijPDez8ECgYEA0Xs96bgOfuNVxbzl
+    Ci2peydO6TrVBFkfdIq+AD9dO7cCe5cHnNcdYC6jA3VK+bfecji+SNkHq5dak79Q
+    lTFQdETMwPLFCqiwIBn3HeWWKHUtRQ/I6YBK65oc9pvUno8gnnZstgsMEYrPo8um
+    g93XzunzZ9MiJ5F8Q3LXSBRO3RkCgYEAwfwXy0ZZzZm7qOr59gTf+F2M7w7woSSz
+    UDNZqlvX81Q+sHX11GaJvGgPtg9E3skiOYpN64ZV+gc98Vp2rGRdSsuZAW/NMypg
+    gtTubLq8cGBi9L4SIhO1+/hl8/Y0Mb1RorGhm/s3YqMX/Pijh6gZ3jyedVP4RCM4
+    KQXSfYoZNXkCgYBK30HBx4dm0tpVUq6KdMeevO33bo+0fiZAAVbnv74TGdZJVjHi
+    XQCi4AhjtAiYOJ/JM37PisKzEeXN6RNkP7wB0pVcYWkL5j8NOjqY9PY2f6sug/XL
+    f49Hpk2z1v6nrYB7Iti4ODqYCoUshh1+BEyeKABXm58ZhWZktSc9HAUUAQKBgFJe
+    bOwPr0oyIREU1Za1czTO5G0N9vc10j4Xz9casJPODeB39i5+a7XoqeMwkJnY5gNw
+    yq1bmV5VfOPi+ckxxLthwFJv2r4DHH/xUlww3psJEnvByYlWvUuEqiXxQTBtpyBi
+    NLE69sWXYzQzj5ymsHVBYDeJtD2ahtpEcqCD5zhhAoGAUrut63hGKvwaiu+uauBU
+    BLN54Mh3UoQMao1Nlr9lPdLwo8BF1k8Q/9Aka+twc0BSBdCIwGWnyxZ8xdRmMKKU
+    Nx/M+618cSGQYTY9xXCQEkB15GO1WOhHD44y/Shrdo5fdi5IpTdYq46hbvCn7cfa
+    dHlB7L3nLVkusAKWf1ATZic=
+    -----END PRIVATE KEY-----
 
-okta:
+  rs256-public-key: |
+    -----BEGIN PUBLIC KEY-----
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnrwydo6vYtB3t+k41EU5
+    qoJ4Y6JNA68rfwTq9pWrLC1gTt9aCfD7nlWIX4nSvW8ZXcSmZt2dJJv+1HgF3K9d
+    u17PX2oOO6wpuMLgxn2Om9K6kfsTV3j+TS03SOMpXQ1NJENi0Yy5kOj4TqM8+GFu
+    eOLq6jnUr8VFC7oD1pM7TZTZBS/5uwa2iSZyPSD1nipdN1BTrVoi7+n7z3SWMiil
+    MwuiPg6zTf7ll4ZC/4DoXDerYtyBFozkIebI/wEZrodAtHt6toIX3TdwdzsUb8g7
+    doUtAgg5BnIj054t9wXN03MUhTVledwjCEfa+9c6nrVxNuL7qpbFCjx3M6Nd/n2t
+    0QIDAQAB
+    -----END PUBLIC KEY-----
+
+auth0:
   oauth2:
-    issuer: https://dev-2w7iaqz0uo3z838c.us.auth0.com
-    client-id: KNr7Y3xwMAC4l2krfuX3OXe9kSZqDNsl
-    client-secret: ${OKTA_OAUTH2_CLIENT_SECRET:xJ4j2y9ZfyG3xJgQ5sQwH+lhmS3IoV2Rg0u/tTzS/Ks=}
+    issuer-uri: https://dev-2w7iaqz0uo3z838c.us.auth0.com
+    client-id: FsfHXxmoCZPNhLtqnK8KPuXHGUxn9dpV
+    client-secret: 3-WBHu5KeLJYISGoj7XEedBeuzSp-vNXezDXnRoEWymisH4G93ERZo4EFsqp-z_-
 
 server:
   port: 8080
