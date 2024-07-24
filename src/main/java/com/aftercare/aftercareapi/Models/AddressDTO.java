@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Address {
+public class AddressDTO {
     private String street;
     private String city;
     private String state;

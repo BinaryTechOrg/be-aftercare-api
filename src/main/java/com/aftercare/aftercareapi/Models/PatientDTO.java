@@ -20,8 +20,10 @@ public class PatientDTO {
     private String lastName;
     private String email;
     private String phone;
+    private String password;
     private String gender;
-    private Address address;
+    private AddressDTO address;
+    private String role;
 
     //TODO Move to utilityClass
     public void convertGender(String gender){

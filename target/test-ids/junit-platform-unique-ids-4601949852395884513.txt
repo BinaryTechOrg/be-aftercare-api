@@ -1,0 +1,8 @@
+[engine:junit-jupiter]/[class:com.aftercare.aftercareapi.AftercareApiApplicationTests]/[method:contextLoads()]
+[engine:junit-jupiter]/[class:com.aftercare.aftercareapi.controller.HospitalControllerTest]/[method:hospitals()]
+[engine:junit-jupiter]/[class:com.aftercare.aftercareapi.controller.UserControllerTest]/[method:deletePatient()]
+[engine:junit-jupiter]/[class:com.aftercare.aftercareapi.controller.UserControllerTest]/[method:getPatientList()]
+[engine:junit-jupiter]/[class:com.aftercare.aftercareapi.controller.UserControllerTest]/[method:getPatient()]
+[engine:junit-jupiter]/[class:com.aftercare.aftercareapi.controller.UserControllerTest]/[method:addPatient()]
+[engine:junit-jupiter]/[class:com.aftercare.aftercareapi.Models.Appointments.AppointmentDTOTest]/[method:getAppointmentId()]
+[engine:junit-jupiter]/[class:com.aftercare.aftercareapi.Models.Appointments.AppointmentDTOTest]/[method:getAppointmentTitle()]
